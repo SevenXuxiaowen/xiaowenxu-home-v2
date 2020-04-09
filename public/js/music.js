@@ -50,15 +50,14 @@ view.onFrame = function () {
 
 // Pause animation until we have data
 view.pause();
+group.opacity = 0;
 
 var trigger = false;
 
-// function onMouseDown(){
-//     flip = !flip;
-// }
-
 function onMouseDown() {
     flip = !flip;
+    group.opacity = 1;
+    
     if (!trigger) {
         trigger = true;
         var AudioContext = window.AudioContext || window.webkitAudioContext;
