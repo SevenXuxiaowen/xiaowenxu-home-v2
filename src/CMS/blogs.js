@@ -45,7 +45,8 @@ export const DATA = {
             auth: "personal",
             tag:["Full-Stack development", "Web"],
             stack:["Node.js", "Express", "MongoDB", "React.js", "semantic UI"],
-            gitHub: "https://github.com/SevenXuxiaowen/Trauma-Forest",
+            gitHub: "https://github.com/SevenXuxiaowen/user-grouped-content-feeding",
+            demo:"https://trauma-forest.herokuapp.com/",
             short_description: "Web2.0 development"
         },{
             title: "Smart Items",
