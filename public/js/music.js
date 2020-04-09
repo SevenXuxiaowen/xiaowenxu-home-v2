@@ -33,7 +33,7 @@ var audio, source, analyserL, analyserR, freqByteData;
 
 view.onFrame = function () {
     var step = view.size.width / (amount + 1);
-    var scale = view.size.height / 1.5;
+    var scale = view.size.height / 1.8;
     analyserL.getByteFrequencyData(freqByteData);
     var leftBands = getEqualizerBands(freqByteData, true);
     analyserR.getByteFrequencyData(freqByteData);
