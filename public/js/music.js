@@ -53,39 +53,51 @@ view.pause();
 group.opacity = 0;
 
 var trigger = false;
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+
+var index = 0;
 
 function onMouseDown() {
-    flip = !flip;
-    group.opacity = 1;
-    
-    if (!trigger) {
-        trigger = true;
-        var AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (AudioContext) {
-            audio = new AudioContext();
-            source = audio.createBufferSource();
-            // Create two separate analyzers for left and right channel.
-            analyserL = audio.createAnalyser();
-            analyserL.smoothingTimeConstant = 0.25;
-            analyserL.fftSize = Math.pow(2, amount) * 2;
-            analyserR = audio.createAnalyser();
-            analyserR.smoothingTimeConstant = analyserL.smoothingTimeConstant;
-            analyserR.fftSize = analyserL.fftSize;
-            // Create the buffer to receive the analyzed data.
-            freqByteData = new Uint8Array(analyserL.frequencyBinCount);
-            // Create a splitter to feed them both
-            var splitter = audio.createChannelSplitter();
-            // Connect audio processing graph
-            source.connect(splitter);
-            splitter.connect(analyserL, 0, 0);
-            splitter.connect(analyserR, 1, 0);
-            // Connect source to output also so we can hear it
-            source.connect(audio.destination);
-            loadAudioBuffer('./files/gnossienne.mp3');
+    if (index === 0) {
+        group.opacity = 1;
+        index = 1;
+        if (audio && audio.state === "suspend") {
+            audio.resume();
         } else {
-            // TODO: Print error message
-            alert('Audio not supported');
+            if (AudioContext) {
+                audio = new AudioContext();
+                source = audio.createBufferSource();
+                // Create two separate analyzers for left and right channel.
+                analyserL = audio.createAnalyser();
+                analyserL.smoothingTimeConstant = 0.25;
+                analyserL.fftSize = Math.pow(2, amount) * 2;
+                analyserR = audio.createAnalyser();
+                analyserR.smoothingTimeConstant = analyserL.smoothingTimeConstant;
+                analyserR.fftSize = analyserL.fftSize;
+                // Create the buffer to receive the analyzed data.
+                freqByteData = new Uint8Array(analyserL.frequencyBinCount);
+                // Create a splitter to feed them both
+                var splitter = audio.createChannelSplitter();
+                // Connect audio processing graph
+                source.connect(splitter);
+                splitter.connect(analyserL, 0, 0);
+                splitter.connect(analyserR, 1, 0);
+                // Connect source to output also so we can hear it
+                source.connect(audio.destination);
+                loadAudioBuffer('./files/gnossienne.mp3');
+            } else {
+                // TODO: Print error message
+                alert('Audio not supported');
+            }
         }
+    } else if (index === 1) {
+        //audio.close();
+        flip = !flip;
+        index = 2;
+    } else if (index === 2) {
+        audio.close();
+        group.opacity = 0;
+        index = 0;
     }
 }
 
