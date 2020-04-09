@@ -17,7 +17,7 @@ export const DATA = {
             stack:["Node.js", "Express", "MongoDB", "React.js", "semantic UI"],
             gitHub: "https://github.com/SevenXuxiaowen/user-grouped-content-feeding",
             demo:"https://trauma-forest.herokuapp.com/",
-            short_description: "A website that can collect users' trauma stories to the 'tree holes'. Let other users to comment and collect those tree holes. ",
+            short_description: "I create this website to decrease the anxiety of people who have mental hurt in modern society. A website that can collect users' trauma stories to the 'tree holes'. Let other users to comment and collect those tree holes. With so many trauma tree holes, this website is called 'Trauma Forest'.",
             img:"img/4-01.png",
         },
         {
