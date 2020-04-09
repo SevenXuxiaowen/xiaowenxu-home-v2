@@ -53,11 +53,12 @@ view.pause();
 
 var trigger = false;
 
-function onMouseDown(){
-    flip = !flip;
-}
+// function onMouseDown(){
+//     flip = !flip;
+// }
 
-function onMouseMove() {
+function onMouseDown() {
+    flip = !flip;
     if (!trigger) {
         trigger = true;
         var AudioContext = window.AudioContext || window.webkitAudioContext;
