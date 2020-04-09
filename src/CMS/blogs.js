@@ -9,16 +9,16 @@ export const DATA = {
         skill_set:["Java","Javascript","Node.js","React","Redux","MongoDB","HTML/CSS","Bootstrap","semanticUI","d3.js"]
     },
     works:[
+        
         {
-            title: "User-auth APIs",
-            auth: "Adaviv Inc.",
-            tag:["Module", "server"],
-            stack:["Back-end", "node.js", "Google+", "session", "MongoDB", "passport.js"],
-            gitHub: "https://github.com/SevenXuxiaowen/user-auth-server",
-            img:"img/1-01.png",
-            
-            short_description: "Back-end module (server) development for user authentication. Based on session control, this module supports multiple 3rd party auth strategies, including Google, Facebook, etc."
-
+            title: "Trauma Forest",
+            auth: "personal",
+            tag:["Full-Stack development", "Web"],
+            stack:["Node.js", "Express", "MongoDB", "React.js", "semantic UI"],
+            gitHub: "https://github.com/SevenXuxiaowen/user-grouped-content-feeding",
+            demo:"https://trauma-forest.herokuapp.com/",
+            short_description: "A website that can collect users' trauma stories to the 'tree holes'. Let other users to comment and collect those tree holes. ",
+            img:"img/4-01.png",
         },
         {
             title: "Annotation Web Tool",
@@ -31,6 +31,16 @@ export const DATA = {
 
             short_description: "Online free-drawing annotation tool, including multi-layer handler, box, brush and filters. The editor supports JSON / PNG / SVG export."
         },{
+            title: "User-auth APIs",
+            auth: "Adaviv Inc.",
+            tag:["Module", "server"],
+            stack:["Back-end", "node.js", "Google+", "session", "MongoDB", "passport.js"],
+            gitHub: "https://github.com/SevenXuxiaowen/user-auth-server",
+            img:"img/1-01.png",
+            
+            short_description: "Back-end module (server) development for user authentication. Based on session control, this module supports multiple 3rd party auth strategies, including Google, Facebook, etc."
+
+        },{
             title: "NLP Chatbot",
             auth: "personal",
             tag:["Full-stack development", "Web"],
@@ -40,14 +50,6 @@ export const DATA = {
             img:"img/3-01.png",
 
             short_description: "Embedded NLP Chatbot"
-        },{
-            title: "Trauma Forest",
-            auth: "personal",
-            tag:["Full-Stack development", "Web"],
-            stack:["Node.js", "Express", "MongoDB", "React.js", "semantic UI"],
-            gitHub: "https://github.com/SevenXuxiaowen/user-grouped-content-feeding",
-            demo:"https://trauma-forest.herokuapp.com/",
-            short_description: "Web2.0 development"
         },{
             title: "Smart Items",
             auth: "personal",
