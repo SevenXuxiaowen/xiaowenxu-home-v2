@@ -5,7 +5,7 @@ var leftPath = new Path({
 
 var rightPath = new Path({
     strokeColor: 'rgb(0, 255, 0)',
-    opacity: 1
+    opacity: 0.8
 });
 
 var amount = 8;
@@ -84,7 +84,7 @@ function onMouseDown() {
                 splitter.connect(analyserR, 1, 0);
                 // Connect source to output also so we can hear it
                 source.connect(audio.destination);
-                loadAudioBuffer('./files/gnossienne.mp3');
+                loadAudioBuffer('./files/wereallleaving.mp3');
             } else {
                 // TODO: Print error message
                 alert('Audio not supported');
