@@ -15,11 +15,10 @@ class Work extends React.Component {
         if (this.props.index % 2 === 0) {
             return (
                 <div className="works-grid row">
-
                     <div className="col-6">
                         <div style={{ margin: "30px 10px 0 10px" }}>
-                            <a className="btn-demo" href={this.props.work.gitHub}>GitHub</a>
-                            {this.props.work.demo ? (<a className="btn-demo" href={this.props.work.demo}>Demo</a>) : null}
+                            <a className="btn-demo" href={this.props.work.gitHub} target="_blank" rel="noopener noreferrer">GitHub</a>
+                            {this.props.work.demo ? (<a className="btn-demo" href={this.props.work.demo}  target="_blank" rel="noopener noreferrer">Demo</a>) : null}
                         </div>
                         <div className="prgt-content grey">
                             <div>
@@ -44,8 +43,8 @@ class Work extends React.Component {
 
                     <div className="col-6">
                         <div style={{ margin: "30px 10px 0 10px" }}>
-                            <a className="btn-demo" href={this.props.work.gitHub}>GitHub</a>
-                            {this.props.work.demo ? (<a className="btn-demo" href={this.props.work.demo}>Demo</a>) : null}
+                            <a className="btn-demo" href={this.props.work.gitHub} target="_blank" rel="noopener noreferrer">GitHub</a>
+                            {this.props.work.demo ? (<a className="btn-demo" href={this.props.work.demo} target="_blank" rel="noopener noreferrer">Demo</a>) : null}
                         </div>
                         <div className="prgt-content grey">
                             <div>

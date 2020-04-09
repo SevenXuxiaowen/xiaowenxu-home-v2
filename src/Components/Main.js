@@ -18,7 +18,7 @@ class Main extends React.Component {
 
         return (
             <div className="main">
-                
+
                 <div className="side-menu">
                     <div className="m-box green"><span className="m-text">About</span>  01</div>
                     <div className="m-box green"><span className="m-text">Work</span>  02</div>
@@ -26,10 +26,8 @@ class Main extends React.Component {
                     <br />
                     <div className="m-box btn-cv">Resume</div>
                 </div>
-
-
+                
                 <div className="page-about container">
-
                     <div className="content-container">
                         <div>
                             <div className="name">Xu <span className="green">S</span>even</div>
@@ -47,7 +45,6 @@ class Main extends React.Component {
                             </div>
                         </div>
                     </div>
-                    {/* <div><img style={{textAlign:'center'}} width="450px" alt="icon" src={`https://media1.giphy.com/media/EcjPLxqN30R1piUOPF/giphy.gif?cid=790b76114a8139ef07a698ca0c9f5913eaf5e739d10e23c4&rid=giphy.gif`} /></div> */}
                 </div>
 
                 <div className="page-works container">
@@ -55,7 +52,6 @@ class Main extends React.Component {
                         <div className="row">{works}</div>
                     </div>
                 </div>
-
 
                 <div className="page-ct">
                     <div className="p-contact">
