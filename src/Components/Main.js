@@ -26,11 +26,15 @@ class Main extends React.Component {
                     <br />
                     <div className="m-box btn-cv">Resume</div>
                 </div>
-                
-                <div className="page-about container">
-                    <div className="content-container">
+
+                <div className="page-about">
+                    <div style={{padding:"0 10px 0 0"}}>
+                        <img src="img/ar.gif" className="img-fluid" alt="ar" />
+                    </div>
+
+                    <div>
                         <div>
-                            <div className="name">Xu <span className="green">S</span>even</div>
+                            <div className="name"><span className="green">S</span>even <span className="orange">X</span>u</div>
                             <br />
                             <p className="text-about" >I'm a part of <span className="green">software developer</span>, a part of <span className="orange">artist</span> based in Bay area.</p>
                             <p className="text-about" >Graduated from <span className="green">Carnegie Mellon University</span>, I develop and design exceptional websites and applications that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.</p>

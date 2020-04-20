@@ -11,14 +11,16 @@ a:hover{
 .main {
   font-family: 'Comfortaa', cursive;
   color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0);
   cursor: default;
 }
 
 .page-about{
-  display: flex;
-  align-items: center;
   height: 900px;
+  padding-top: 10%;
+  padding-right: 18%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .page-works{
